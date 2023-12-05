@@ -20,7 +20,7 @@ export default function Home() {
     console.log(product, error);
   }
   return (
-    <Container style={{ display: 'flex', justifyContent: 'left' }}>
+    <Container  style={{ display: 'flex', justifyContent: 'left',}}>
       <>
         {products &&
           products.map((product) => (

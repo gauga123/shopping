@@ -1,10 +1,10 @@
-import { Container } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import supabase from '../../services/supabase';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import supabase from '../../services/supabase';
-import { useForm } from 'react-hook-form';
+import Container from 'react-bootstrap/Container';
 
-export default function ProductAdd() {
+export default function Add() {
   const { register, handleSubmit } = useForm();
 
   async function onSubmit(formData) {
@@ -14,55 +14,52 @@ export default function ProductAdd() {
         {
           name: formData.name,
           img: formData.img,
-          detail: formData.detail,
           price: formData.price,
+          detail: formData.detail,
         },
-      ])
+      ])    
       .select();
-
-    console.log(data, error);
+    console.log(formData);
+    console.log(error, data);
     if (error) {
       alert(error);
     } else {
-      alert('Thêm hàng thành công');
+      alert('thêm thành công');
     }
   }
 
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form.Group></Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
-          <Form.Control
-            {...register('name')}
-            type="name"
-            placeholder="Enter Name"
-          />
-          <Form.Text className="text-muted"></Form.Text>
+          <Form.Control {...register('name')} type="name" placeholder="Name" />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control {...register('img')} type="img" placeholder="Url" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Image</Form.Label>
-          <Form.Control {...register('img')} type="img" placeholder="URL" />
-          <Form.Text className="text-muted"></Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Price</Form.Label>
-          <Form.Control
-            {...register('price')}
-            type="price"
-            placeholder="Detail"
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Decscription</Form.Label>
+          <Form.Label>Detail</Form.Label>
           <Form.Control
             {...register('detail')}
             type="detail"
             placeholder="Detail"
           />
         </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Price</Form.Label>
+          <Form.Control
+            {...register('price')}
+            type="Price"
+            placeholder="Price"
+          />
+        </Form.Group>
+
         <Button variant="primary" type="submit">
-          Add
+          Submit
         </Button>
       </Form>
     </Container>

@@ -23,7 +23,6 @@ export default function Login() {
     } else {
       alert('Đăng nhập thành công');
       navigate('/');
-
     }
   }
 

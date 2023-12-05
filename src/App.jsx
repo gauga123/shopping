@@ -3,8 +3,6 @@ import Product from './pages/Product/index.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Cart from './pages/Cart.jsx';
-import ProductAdd from './pages/Product/ProductAdd.jsx';
-import Test from './pages/Product/test.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Edit from './pages/Product/ProductEdit.jsx';
@@ -14,6 +12,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
 import supabase from './services/supabase.js';
+import Add from './pages/Product/ProductAdd.jsx';
 
 function App() {
   const [isLogin, setIsLogin] = useState(
@@ -64,7 +63,6 @@ function App() {
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product/add" element={<ProductAdd/>}></Route>
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />
@@ -72,7 +70,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/product/edit" element={<Edit />}></Route>
         <Route path="/product/list" element={<List />}></Route>
-        <Route path="/test" element={<Test />}></Route>
+        <Route path="/product/add" element={<Add />}></Route>
       </Routes>
     </BrowserRouter>
   );
