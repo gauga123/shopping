@@ -17,9 +17,10 @@ export default function Home() {
     if (error) {
       alert(error);
     }
+    console.log(product, error);
   }
   return (
-    <Container className="p-4" fluid="md">
+    <Container style={{ display: 'flex', justifyContent: 'left' }}>
       <>
         {products &&
           products.map((product) => (

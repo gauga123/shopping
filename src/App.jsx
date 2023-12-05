@@ -3,6 +3,8 @@ import Product from './pages/Product/index.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Cart from './pages/Cart.jsx';
+import ProductAdd from './pages/Product/ProductAdd.jsx';
+import Test from './pages/Product/test.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Edit from './pages/Product/ProductEdit.jsx';
@@ -27,7 +29,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar bg="primary" data-bs-theme="dark">
-        <Container  >
+        <Container>
           <Navbar.Brand to="#home">Logo</Navbar.Brand>
           <Nav className="me-auto">
             <NavLink className="p-2" to="/">
@@ -62,6 +64,7 @@ function App() {
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product/add" element={<ProductAdd/>}></Route>
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />
@@ -69,6 +72,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/product/edit" element={<Edit />}></Route>
         <Route path="/product/list" element={<List />}></Route>
+        <Route path="/test" element={<Test />}></Route>
       </Routes>
     </BrowserRouter>
   );
