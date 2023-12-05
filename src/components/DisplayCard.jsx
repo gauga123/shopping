@@ -8,7 +8,7 @@ export default function DisplayCard(props) {
   console.log(product);
 
   return (
-    <Card style={{ width: '18rem', margin: '10px', display: 'block' }}>
+    <Card  style={{ width: '18rem' }}>
       <Card.Img variant="top" src={product.img} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>

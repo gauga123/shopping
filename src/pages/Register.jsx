@@ -20,7 +20,7 @@ export default function Register() {
       alert(error);
     } else {
       alert('đăng kí thành công, Yêu cầu xác nhận');
-      navigate('/login');
+      navigate('/login')
     }
   }
 
