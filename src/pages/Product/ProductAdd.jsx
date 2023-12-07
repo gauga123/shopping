@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -17,14 +16,10 @@ export default function ProductAdd() {
     console.log(formAdd);
     console.log(error, data);
   }
->>>>>>> parent of 51d9fd8 (2)
 
-export default function Add() {
+
+
   return (
-<<<<<<< HEAD
-    <div>ProductAdd</div>
-  )
-=======
     <Container>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -52,5 +47,5 @@ export default function Add() {
       </Form>
     </Container>
   );
->>>>>>> parent of 51d9fd8 (2)
 }
+
