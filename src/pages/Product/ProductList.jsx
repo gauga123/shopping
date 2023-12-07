@@ -1,6 +1,24 @@
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+export default function ProductList(props) {
+  const navigate = useNavigate();
+  function test() {
+    navigate('/product/edit');
+  }
 
-export default function List() {
+  /* eslint-disable react/prop-types */
+  const { product } = props;
   return (
-    <div>List</div>
-  )
+    <tr>
+      <td>{product.id_product}</td>
+      <td>{product.name}</td>
+      <td>{product.price}</td>
+      <td>
+        <Button variant="danger">Delete</Button>
+        <Button onClick={test} variant="warning">
+          Edit
+        </Button>
+      </td>
+    </tr>
+  );
 }
