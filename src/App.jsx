@@ -6,7 +6,7 @@ import Cart from './pages/Cart.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Edit from './pages/Product/ProductEdit.jsx';
-import List from './pages/Product/ProductList.jsx';
+import List from './components/ProductList.jsx';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -68,7 +68,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/product/edit" element={<Edit />}></Route>
+        <Route path="/product/edit/:id" element={<Edit />}></Route>
         <Route path="/product/list" element={<List />}></Route>
         <Route path="/product/add" element={<Add />}></Route>
       </Routes>

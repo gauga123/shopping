@@ -19,7 +19,7 @@ export default function Home() {
     }
   }
   return (
-    <Container className="p-4" fluid="md"style={{display:'flex',margin:'10px'}}>
+    <Container className="p-4" fluid="md" style={{ display: 'flex' }}>
       <>
         {products &&
           products.map((product) => (

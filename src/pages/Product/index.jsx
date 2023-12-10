@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import List from './ProductList';
+import List from '../../components/ProductList';
 import supabase from '../../services/supabase';
 import { Container, Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';

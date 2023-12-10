@@ -16,6 +16,8 @@ export default function ProductAdd() {
           img: formData.img,
           detail: formData.detail,
           price: formData.price,
+          email: 'vothicuong123@gmail.com',
+          user_id: 'fa3fcc13-8d8e-4891-81e2-4e22184cbc63',
         },
       ])
       .select();
@@ -50,7 +52,7 @@ export default function ProductAdd() {
           <Form.Control
             {...register('price')}
             type="price"
-            placeholder="Detail"
+            placeholder="Price"
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
